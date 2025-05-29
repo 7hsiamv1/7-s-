@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7ʜㅤsɪᴀᴍ</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      text-align: left;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .info p {
+      margin: 6px 0;
+      font-size: 15px;
+      color: #f1f5f9;
+      overflow: hidden;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #94a3b8;
+    }
+
+    .value {
+      float: right;
+      color: #e2e8f0;
+    }
+
+    .button {
+      background-color: #a855f7;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 30px;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #9333ea;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://firebasestorage.googleapis.com/v0/b/htopup-f2fde.appspot.com/o/url%2F20241216_092531.png?alt=media&token=9fd81a79-f6df-4516-aed8-9862ac53c6ac" alt="Profile Image" class="profile-img"/>
+      <h2>7ʜㅤsɪᴀᴍ</h2>
+      <div class="info">
+        <p><span class="label">Fav game:</span> <span class="value">Free Fire</span></p>
+        <p><span class="label">Fav Gun:</span> <span class="value">AWM</span></p>
+        <p><span class="label">In game name:</span> <span class="value">7ʜㅤsɪᴀᴍ</span></p>
+        <p><span class="label">Age:</span> <span class="value">16</span></p>
+        <p><span class="label">Fav Player:</span> <span class="value">Born2Kill</span></p>
+        <p><span class="label">Fav Idol:</span> <span class="value">Lorem</span></p>
+        <p><span class="label">Fav Match:</span> <span class="value">TOURNAMENT</span></p>
+      </div>
+      <button class="button" onclick="goBack()">BACK</button>
+    </div>
+  </div>
+
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#38bdf8" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#38bdf8",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          out_mode: "bounce"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    function goBack() {
+      // আগের পেজে ফিরে যাওয়ার বদলে নির্দিষ্ট পেজে যাওয়ার জন্য:
+      window.location.href = "index.html"; // এখানে তোমার কাঙ্ক্ষিত URL বসাও
+    }
+  </script>
+</body>
+</html>
